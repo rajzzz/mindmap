@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.18s ease both;
+  }
+  .animate-fade-up-2 { animation: fadeUp 0.18s 0.03s ease both; }
+  .animate-fade-up-3 { animation: fadeUp 0.18s 0.06s ease both; }
+  .animate-fade-up-4 { animation: fadeUp 0.18s 0.09s ease both; }
+  .animate-fade-up-5 { animation: fadeUp 0.18s 0.12s ease both; }
+  .animate-fade-up-n { animation: fadeUp 0.18s 0.15s ease both; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* SVG hover helpers */
+.cat-node-rect {
+  transition: all 0.2s;
+}
+.cat-node:hover .cat-node-rect {
+  filter: brightness(1.08);
+}
+
+/* Search highlight */
+.search-hi {
+  background: #fde047;
+  color: #161200;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+@media (prefers-color-scheme: dark) {
+  .search-hi { background: #854d00; color: #fde047; }
+}
+
+/* Done strikethrough */
+.concept-done .concept-text {
+  text-decoration: line-through;
+  opacity: 0.45;
+}
