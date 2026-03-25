@@ -3,6 +3,7 @@ import { cats as jsCats, totalConcepts as jsTotalConcepts, pal } from './data/mi
 import { reactCats } from './data/reactData'
 import { nextCats } from './data/nextData'
 import { aiCats } from './data/aiData'
+import { leetCats } from './data/leetData'
 import { useProgress } from './hooks/useProgress'
 import { useSearch } from './hooks/useSearch'
 import { useKeyboardNav } from './hooks/useKeyboardNav'
@@ -17,10 +18,11 @@ const TOPICS = [
   { id: 'react', label: 'React',     badge: 'v18 / v19', cats: reactCats, color: '#61DAFB', textColor: '#1a2a30' },
   { id: 'next',  label: 'Next.js',   badge: '14 / 15',   cats: nextCats,  color: '#ffffff', textColor: '#1a1a18' },
   { id: 'ai',    label: 'AI Eng',    badge: '2026',      cats: aiCats,    color: '#a855f7', textColor: '#ffffff' },
+  { id: 'leet',  label: 'LeetCode',  badge: 'DSA',       cats: leetCats,  color: '#FFA116', textColor: '#1a1200' },
 ]
 
 // Each topic gets its own isolated progress store key
-const STORE_KEYS = { js: 'jsmm_prog_v1', react: 'reactmm_prog_v1', next: 'nextmm_prog_v1', ai: 'aimm_prog_v1' }
+const STORE_KEYS = { js: 'jsmm_prog_v1', react: 'reactmm_prog_v1', next: 'nextmm_prog_v1', ai: 'aimm_prog_v1', leet: 'leetmm_prog_v1' }
 
 export default function App() {
   const [topic, setTopic] = useState('js')
